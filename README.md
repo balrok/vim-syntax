@@ -3,7 +3,9 @@ Various files for better syntax highlighting: grgen, tina, lola - I'm not always
 
 ## GrGen
 
-Syntax files for (grgen)[http://grgen.net] are taken from their project and improved.
+### Syntax
+
+Syntax files for (grgen)[http://grgen.net] are taken from the GrGen project and improved.
 
 Extensions:
 * .gm -> gm
@@ -13,6 +15,12 @@ Extensions:
 The syntax gets even more pretty if you have: `ap/vim-css-color` - when specifying the graph layout and its colors, the colors will be
 directly displayed.
 
+### Neomake Checking
+
+Putting the `bin/grgcheck` into your `PATH` would allow `neomake/neomake` syntax checking.
+What `grgcheck` does is basically check the `Rules.grg` which is in the same dir as the `*.grg` or `*.gm` file you are editing.
+
+This means
 
 ## Tina
 

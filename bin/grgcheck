@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+import sys
+import subprocess
+import os
+import re
+
+def main(orig_filename):
+    """Does a grgencheck on "filename"
+    """
+    filename = orig_filename
+    dir = os.path.abspath(os.path.dirname(filename))
+    if filename != "Rules.grg":
+        frules = os.path.join(dir, "Rules.grg")
+        if os.path.exists(frules):
+            filename = "Rules.grg"
+    if filename.endswith("Rules.grg"):
+        try:
+            out = subprocess.check_output( ['GrGen', filename], cwd=dir, stderr=subprocess.STDOUT, universal_newlines=True)
+        except subprocess.CalledProcessError as e:
+            out = e.output
+        result = process_out(orig_filename, out)
+        print("\n".join(result))
+
+def process_out(filename, out):
+    # GrGen: [ERROR at Rules.grg:4,0] missing EOF at ','
+    ret = []
+    start = False
+    for line in out.split("\n"):
+        if line.startswith("Error while processing specification"):
+            start = True
+        if start:
+            m = re.match("GrGen: \[(\w+) at ([^:]+):([0-9]+),([0-9]+)] (.*)", line)
+            if m:
+                etype, efile, eline, ecol, emsg = m.groups()
+                ret += [etype[0]+" "+efile+":"+eline+":"+ecol+" "+emsg]
+    return ret
+
+if __name__ == "__main__":
+    main(sys.argv[1])

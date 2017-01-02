@@ -1,5 +1,5 @@
 syntax match comma ","
-syn keyword lolaKeyWords EF AG AX EX AF FIRABLE
+syn keyword lolaKeyWords EF AG AX EX AF FIREABLE
 syn keyword lolaOpKeywords AND OR NOT
 syntax match  lolaOperator "[#<>=~^&|*/%+-]\|\.\."
 syntax match  lolaBrackets "[()]"

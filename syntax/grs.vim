@@ -19,7 +19,7 @@ syn keyword grgKeyWords "debug set layout" nextgroup=grgLayoutType
 syn keyword grgLayoutType Random Hierarchic Organic Orthogonal Circular Tree Diagonal Incremental Hierarchic Compilergraph
 
 syn keyword gmKeyWords  new graph quit
-syn keyword gmKeyWords  start exit
+syn keyword gmKeyWords  start exit exec include validate
 syn keyword gmKeyWords  dump xgrs echo
 syn keyword gmKeyWords  debug show
 syn keyword gmOptions   add set layout option textcolor color labels
