@@ -6,7 +6,7 @@ syntax match  lolaBrackets "[()]"
 
 syn region  lolaComment   start="/\*" end="\*/" contains=@Spell
 
-syn match gmBoolean /\<\(yes\|no\|true\|false\)\>\(\_s\+\ze"\)\@!/
+syn match gmBoolean /\<\(yes\|no\|TRUE\|FALSE\)\>\(\_s\+\ze"\)\@!/
 
 syn region markingDef matchgroup=markingDef2 start="^MARKING" end=";" contains=node, tokens
 syn region placeDef matchgroup=placeDef2 start="^PLACE" end=";" contains=node
