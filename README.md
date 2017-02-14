@@ -37,6 +37,10 @@ I'm not sure if there exists some file-extension standard for them. I implemente
 * .lolar -> lola result file
 * .formula -> lola formula file
 
+## Orchestration Style Sheets
+
+* .oss -> oss
+
 # Installation
 
 Install it with plug.vim:
