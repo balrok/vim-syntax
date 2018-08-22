@@ -15,6 +15,7 @@ syn keyword grgKeyWords            alternative delete dpo exact false hom
 syn keyword grgKeyWords            induced iterated modify multiple negative prio independent
 syn keyword grgKeyWords            replace return true typeof def var
 syn keyword grgKeyWords            count package function procedure continue
+syn keyword grgKeyWords            int node
 syn keyword grgKeyWords            pattern rule test nextgroup=grgRulePrefix
 "original did not work: syn keyword grgKeyWords            exec using nextgroup=grgIgnoreStatement
 syn keyword grgKeyWords            using nextgroup=grgString
